@@ -84,7 +84,6 @@ export class App extends Component {
         </Section>
         <Section title="Contacts">
           <Filter value={filter} handleChangeFilter={this.handleChangeFilter} />
-
           <ContactList
             contacts={filteredContact}
             deleteContact={this.deleteContact}

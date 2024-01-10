@@ -6,6 +6,7 @@ import { Section } from './Section/Section';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './Contacts/ContactList/ContactList';
+import { loadFromLS, saveToLS } from './helpers/storage';
 
 export class App extends Component {
   state = {
@@ -17,6 +18,20 @@ export class App extends Component {
     ],
     filter: '',
   };
+
+  componentDidMount() {
+    const savedContacts = loadFromLS('contactList');
+    if (savedContacts) {
+      this.setState({ contacts: savedContacts });
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    const { contacts } = this.state;
+    if (prevState.contacts !== contacts) {
+      saveToLS('contactList', contacts);
+    }
+  }
 
   addContact = data => {
     const newContact = {

@@ -30,10 +30,11 @@ export const Button = styled.button`
   text-shadow: ${({ theme }) => theme.shadows.text};
 
   margin: 8px;
-  padding: 10px;
+  padding: 11px;
   background-color: ${({ theme }) => theme.colors.pinkBg};
   border-radius: ${({ theme }) => theme.spacing(4)};
-  border: 2px solid ${({ theme }) => theme.colors.gray};
+  border: 1px solid ${({ theme }) => theme.colors.gray};
+  box-shadow: ${({ theme }) => theme.shadows.regular};
   transition: ${({ theme }) => theme.transition.trnz},
     ${({ theme }) => theme.transition.delay};
 
@@ -41,7 +42,6 @@ export const Button = styled.button`
   &:focus {
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.blue};
-    box-shadow: ${({ theme }) => theme.shadows.regular};
     transform: scale(1.1);
   }
 `;

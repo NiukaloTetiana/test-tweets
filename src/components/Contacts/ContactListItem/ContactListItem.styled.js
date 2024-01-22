@@ -8,16 +8,14 @@ export const ContactItem = styled.li`
 `;
 
 export const ContactName = styled.p`
-  color: ${({ theme }) => theme.colors.dark};
-  font-family: Roboto;
-  font-size: 20px;
-  text-shadow: ${({ theme }) => theme.shadows.text};
-  font-weight: 500;
   justify-content: flex-start;
+  font-size: 22px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.blue};
+  text-shadow: ${({ theme }) => theme.shadows.text};
 `;
 
 export const ContactNumber = styled.span`
-  font-family: Roboto;
   font-style: italic;
   font-size: 20px;
   color: ${({ theme }) => theme.colors.gray};
@@ -26,22 +24,23 @@ export const ContactNumber = styled.span`
 `;
 
 export const Button = styled.button`
-  font-family: Roboto;
+  font-size: 19px;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.blue};
-  font-size: 20px;
   text-shadow: ${({ theme }) => theme.shadows.text};
 
   margin: 8px;
   padding: 10px;
-  border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.grine};
-  box-shadow: ${({ theme }) => theme.shadows.small};
+  background-color: ${({ theme }) => theme.colors.pinkBg};
+  border-radius: ${({ theme }) => theme.spacing(4)};
+  border: 2px solid ${({ theme }) => theme.colors.gray};
   transition: ${({ theme }) => theme.transition.trnz},
     ${({ theme }) => theme.transition.delay};
 
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.blue};
     box-shadow: ${({ theme }) => theme.shadows.regular};
     transform: scale(1.1);
   }

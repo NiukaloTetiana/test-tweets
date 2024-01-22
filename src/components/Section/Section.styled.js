@@ -10,10 +10,9 @@ export const SectionContainer = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-family: Roboto;
-  color: ${({ theme }) => theme.colors.blue};
   font-size: 32px;
   font-weight: 600;
+  color: ${({ theme }) => theme.colors.blue};
   text-shadow: ${({ theme }) => theme.shadows.text};
   margin: 0;
 `;

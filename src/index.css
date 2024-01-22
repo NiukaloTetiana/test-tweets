@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://img.freepik.com/premium-photo/soft-focus-abstract-floral-background-pale-blue-peony-flower-petals-macro-flowers-backdrop-for_459897-685.jpg');
+  background-size: cover;
 }
 
 code {

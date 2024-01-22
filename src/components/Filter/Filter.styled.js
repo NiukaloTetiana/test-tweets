@@ -4,7 +4,7 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-family: Roboto;
+
   font-style: italic;
   font-size: 20px;
   color: ${({ theme }) => theme.colors.gray};
@@ -13,22 +13,23 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 320px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 13px;
   align-items: center;
-  background-color: transparent;
+  background-color: ${({ theme }) => theme.colors.pink};
   border: 2px solid ${({ theme }) => theme.colors.gray};
+  border-radius: ${({ theme }) => theme.spacing(4)};
   outline: transparent;
 
-  color: ${({ theme }) => theme.colors.dark};
-  font-family: Roboto;
-  font-size: 20px;
+  color: ${({ theme }) => theme.colors.blue};
+  font-size: 22px;
   text-shadow: ${({ theme }) => theme.shadows.text};
-  font-weight: 500;
 
   &::placeholder {
+    font-size: 18px;
     font-style: italic;
+    opacity: 1;
+
     color: ${({ theme }) => theme.colors.gray};
-    text-shadow: ${({ theme }) => theme.shadows.text};
+    text-shadow: none;
   }
 `;

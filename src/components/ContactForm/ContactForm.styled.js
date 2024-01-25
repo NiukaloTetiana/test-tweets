@@ -47,7 +47,7 @@ export const Button = styled.button`
 
   border-radius: ${({ theme }) => theme.spacing(4)};
   border: 1px solid ${({ theme }) => theme.colors.gray};
-  background-color: ${({ theme }) => theme.colors.pinkBg};
+  background-color: ${({ theme }) => theme.colors.pink};
   box-shadow: ${({ theme }) => theme.shadows.regular};
   transition: ${({ theme }) => theme.transition.trnz},
     ${({ theme }) => theme.transition.delay};

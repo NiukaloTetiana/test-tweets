@@ -31,7 +31,7 @@ export const Button = styled.button`
 
   margin: 8px;
   padding: 11px;
-  background-color: ${({ theme }) => theme.colors.pinkBg};
+  background-color: ${({ theme }) => theme.colors.pink};
   border-radius: ${({ theme }) => theme.spacing(4)};
   border: 1px solid ${({ theme }) => theme.colors.gray};
   box-shadow: ${({ theme }) => theme.shadows.regular};

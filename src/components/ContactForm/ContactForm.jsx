@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/operations';
 import { nanoid } from '@reduxjs/toolkit';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Form, Input, Label, Button } from './ContactForm.styled';
@@ -12,15 +12,24 @@ export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const findContacts = contacts.find(
+  const findContactByName = contacts.find(
     contact => contact.name.toLowerCase() === name.toLowerCase()
+  );
+
+  const findContactNumder = contacts.find(
+    contact => contact.number.toLowerCase() === number.toLowerCase()
   );
 
   const handleSubmit = event => {
     event.preventDefault();
 
-    if (findContacts) {
-      Notify.failure(`${name} is already in contacts.`);
+    if (findContactByName) {
+      Notify.info(`${name} is already in contacts.`);
+      return;
+    }
+
+    if (findContactNumder) {
+      Notify.info(`${number} is already in contacts.`);
       return;
     }
 
@@ -31,7 +40,7 @@ export const ContactForm = () => {
   };
 
   const handleChange = ({ target }) => {
-    const { name, value } = target;
+    const { value, name } = target;
     switch (name) {
       case 'name':
         setName(value);

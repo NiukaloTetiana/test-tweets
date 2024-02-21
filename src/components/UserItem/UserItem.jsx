@@ -59,7 +59,7 @@ export const UserItem = ({
       </ContainerLine>
 
       <Info>
-        <Text>{tweets} TWEETS</Text>
+        <Text>{tweets} 555 TWEETS</Text>
         <Text>{followersCount.toLocaleString('en-US')} FOLLOWERS</Text>
       </Info>
       <Button type="button" value={isFollowing} onClick={handleFollowClick}>

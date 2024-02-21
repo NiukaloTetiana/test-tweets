@@ -13,15 +13,3 @@ export const getUsers = async () => {
     throw error;
   }
 };
-
-export const updateUsers = async (id, followers, following) => {
-  try {
-    const { data } = await instance.put(`/users/${id}`, {
-      followers,
-      following,
-    });
-    return data;
-  } catch (error) {
-    console.log(error.message);
-  }
-};

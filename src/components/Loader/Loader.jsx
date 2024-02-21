@@ -5,7 +5,7 @@ export const Loader = () => {
   return (
     <LoderBeckdrop>
       <RingLoader
-        color="#02a7e3e7"
+        color="#5736A3"
         size={100}
         aria-label="Loading Spinner"
         data-testid="loader"

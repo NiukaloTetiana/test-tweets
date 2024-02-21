@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
+* {
+  box-sizing: border-box;
+}
+
   h1,
   h2,
   h3,

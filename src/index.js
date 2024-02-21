@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { App } from 'components/App';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'styles/theme';
+import { App } from 'components/App';
 import { GlobalStyle } from 'styles/CreateGlobalStyle';
-import { store } from './redux/store';
+import { theme } from 'styles/theme';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Provider store={store}>
+      <BrowserRouter basename="/goit-test-tweets">
         <App /> <GlobalStyle />
-      </Provider>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );

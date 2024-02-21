@@ -50,8 +50,9 @@ export const ContainerAvatar = styled.div`
   position: relative;
   z-index: 1000;
 
-  border: 8px solid ${({ theme }) => theme.colors.light};
+  border-color: 8px solid ${({ theme }) => theme.colors.light};
   border-radius: ${({ theme }) => theme.spacing(15)};
+  background-color: ${({ theme }) => theme.colors.light};
   box-shadow: ${({ theme }) => theme.shadows.line};
 
   width: 80px;
@@ -61,8 +62,8 @@ export const ContainerAvatar = styled.div`
 export const Avatar = styled.img`
   overflow: hidden;
   border-radius: ${({ theme }) => theme.spacing(15)};
-  width: 64px;
-  height: 64px;
+  width: 63px;
+  height: 63px;
 `;
 
 export const Info = styled.div`

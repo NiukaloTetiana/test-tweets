@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import logotype from '../../assets/logotype.svg';
 import picture_1x from '../../assets/images/picture_1x.png';
@@ -17,8 +17,8 @@ import {
   ContainerLine,
 } from './UserItem.styled';
 
-export const UserItem = () => {
-  const [followersCount, setFollowersCount] = useState(100500);
+export const UserItem = ({ avatar, user, tweets, followers }) => {
+  const [followersCount, setFollowersCount] = useState(followers);
   const [isFollowing, setIsFollowing] = useState(false);
 
   const handleFollowClick = () => {
@@ -30,23 +30,17 @@ export const UserItem = () => {
     setIsFollowing(!isFollowing);
   };
 
-  const data = {
-    createdAt: '2024-02-20T19:03:30.987Z',
-    user: 'Mrs. Raquel Koelpin',
-    tweets: 787,
-    followers: followersCount,
-    avatar:
-      'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/772.jpg',
-    id: '1',
-  };
+  useEffect(() => {
+    localStorage.setItem(`following_${user}`, isFollowing.toString());
+  }, [isFollowing, user]);
 
   return (
-    <Item key={data.id}>
+    <Item>
       <Logo src={logotype} alt="Logo" width="76" height="22" loading="lazy" />
 
       <Picture>
         <source
-          srcSet={`${picture_1x}, ${picture_2x} 2x`}
+          srcSet={`${picture_1x} 1x, ${picture_2x} 2x`}
           type="image/png"
           loading="lazy"
         />
@@ -55,13 +49,13 @@ export const UserItem = () => {
 
       <ContainerLine>
         <ContainerAvatar>
-          <Avatar src={data.avatar} alt={data.user} width="60" loading="lazy" />
+          <Avatar src={avatar} alt={user} width="60" loading="lazy" />
         </ContainerAvatar>
       </ContainerLine>
 
       <Info>
-        <Text>{data.tweets} TWEETS</Text>
-        <Text>{data.followers.toLocaleString('en-US')} FOLLOWERS</Text>
+        <Text>{tweets.toLocaleString()} TWEETS</Text>
+        <Text>{followersCount.toLocaleString('en-US')} FOLLOWERS</Text>
       </Info>
       <Button type="button" value={isFollowing} onClick={handleFollowClick}>
         {isFollowing ? 'Following' : 'Follow'}

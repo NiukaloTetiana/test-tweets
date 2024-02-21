@@ -1,37 +1,36 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { GoBack } from 'components/GoBack/GoBack';
 import { Loader } from 'components/Loader/Loader';
 import { UsersList } from 'components/UsersList/UsersList';
-import { getUsers } from 'services/users';
-import { LoadMore } from 'components/LoadMore/LoadMore';
-// import { LoadMore } from '../../components/LoadMore/LoadMore';
+// import { LoadMore } from 'components/LoadMore/LoadMore';
+import { selectError, selectIsLoading } from '../../redux/selectors';
+import NotFound from 'pages/NotFound/NotFound';
+import { fetchUsers } from '../../redux/operations';
 
 const Tweets = () => {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showLoadMore, setShowLoadMore] = useState(true);
+  const dispatch = useDispatch();
+  const loading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
-    setIsLoading(true);
-    getUsers()
-      .then(setUsers)
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
-      .finally(() => setIsLoading(false));
-  }, []);
-
-  const handleLoadMore = () => {
-    setShowLoadMore(prevState => ({
-      page: prevState.page + 1,
-    }));
-  };
+  // const handleLoadMore = () => {
+  //   setShowLoadMore(prevState => ({
+  //     page: prevState.page + 1,
+  //   }));
+  // };
 
   return (
     <>
       <GoBack />
-      {users.length > 0 && <UsersList users={users} />}
-      {isLoading && <Loader />}
-      {showLoadMore && <LoadMore onClick={handleLoadMore} />}
+      {loading && <Loader />}
+      {error && <NotFound />}
+      <UsersList />
+      {/* {showLoadMore && <LoadMore onClick={handleLoadMore} />} */}
     </>
   );
 };

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { GoBack } from 'components/GoBack/GoBack';
 import { Loader } from 'components/Loader/Loader';
 import { UsersList } from 'components/UsersList/UsersList';
-// import { LoadMore } from 'components/LoadMore/LoadMore';
+// import { LoadMoreButton } from 'components/LoadMore/LoadMore';
 import { selectError, selectIsLoading } from '../../redux/selectors';
 import NotFound from 'pages/NotFound/NotFound';
 import { fetchUsers } from '../../redux/operations';
@@ -30,7 +30,7 @@ const Tweets = () => {
       {loading && <Loader />}
       {error && <NotFound />}
       <UsersList />
-      {/* {showLoadMore && <LoadMore onClick={handleLoadMore} />} */}
+      {/* {showLoadMore && <LoadMoreButton onClick={handleLoadMore} />} */}
     </>
   );
 };

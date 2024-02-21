@@ -22,8 +22,6 @@ export const Logo = styled.img`
   left: 20px;
 `;
 
-export const Picture = styled.div``;
-
 export const Img = styled.img`
   margin: 28px 36px 0;
   width: 308px;
@@ -79,28 +77,4 @@ export const Text = styled.p`
   font-size: 20px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.light};
-`;
-
-export const Button = styled.button`
-  padding: 14px 28px;
-  width: 196px;
-  height: 50px;
-
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${props =>
-    props.value ? props.theme.colors.green : props.theme.colors.light};
-  border-radius: ${({ theme }) => theme.spacing(2.5)};
-  box-shadow: ${({ theme }) => theme.shadows.box};
-  transition: ${({ theme }) => theme.transition.trnz},
-    ${({ theme }) => theme.transition.delay};
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
-    transform: scale(1.1);
-  }
 `;

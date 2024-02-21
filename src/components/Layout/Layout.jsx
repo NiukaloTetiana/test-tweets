@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { RiHomeHeartFill } from 'react-icons/ri';
+import { RiHomeGearLine } from 'react-icons/ri';
+import { GiHummingbird } from 'react-icons/gi';
 
 import {
   Container,
@@ -19,12 +20,15 @@ export const Layout = () => {
           <NavList>
             <NavItem>
               <StyledLink to="/">
-                <RiHomeHeartFill />
+                <RiHomeGearLine />
                 Home
               </StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to="/tweets">Tweets</StyledLink>
+              <StyledLink to="/tweets">
+                <GiHummingbird />
+                Tweets
+              </StyledLink>
             </NavItem>
           </NavList>
         </Navigation>

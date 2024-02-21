@@ -6,7 +6,7 @@ export const Loader = () => {
     <LoderBeckdrop>
       <RingLoader
         color="#5736A3"
-        size={100}
+        size={80}
         aria-label="Loading Spinner"
         data-testid="loader"
         speedMultiplier="1"

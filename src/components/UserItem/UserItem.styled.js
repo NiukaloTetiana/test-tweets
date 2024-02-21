@@ -61,8 +61,8 @@ export const ContainerAvatar = styled.div`
 export const Avatar = styled.img`
   overflow: hidden;
   border-radius: ${({ theme }) => theme.spacing(15)};
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
 `;
 
 export const Info = styled.div`
@@ -91,7 +91,8 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   color: ${({ theme }) => theme.colors.text};
-  background-color: ${props => (props.value ? '#5CD3A8' : '#ebd8ff')};
+  background-color: ${props =>
+    props.value ? props.theme.colors.green : props.theme.colors.light};
   border-radius: ${({ theme }) => theme.spacing(2.5)};
   box-shadow: ${({ theme }) => theme.shadows.box};
   transition: ${({ theme }) => theme.transition.trnz},

@@ -12,5 +12,5 @@ export const LoderBeckdrop = styled.div`
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(11, 73, 109, 0.451);
+  background-color: ${({ theme }) => theme.colors.backgNav};
 `;

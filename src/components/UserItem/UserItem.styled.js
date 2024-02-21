@@ -54,8 +54,8 @@ export const ContainerAvatar = styled.div`
   border-radius: ${({ theme }) => theme.spacing(15)};
   box-shadow: ${({ theme }) => theme.shadows.line};
 
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
 `;
 
 export const Avatar = styled.img`

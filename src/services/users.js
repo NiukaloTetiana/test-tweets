@@ -6,14 +6,11 @@ const instance = axios.create({
 
 export const getUsers = async () => {
   try {
-    // Використовуємо instance.get для виконання GET-запиту до `/users`
     const { data } = await instance.get('/users');
-
     return data;
   } catch (error) {
-    // Обробляємо помилку, якщо вона виникне
     console.error('Error fetching users:', error.message);
-    throw error; // Якщо потрібно обробити помилку вище, можна викинути її далі
+    throw error;
   }
 };
 

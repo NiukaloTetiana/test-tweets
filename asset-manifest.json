@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/goit-test-tweets/static/css/main.dedb5910.css",
-    "main.js": "/goit-test-tweets/static/js/main.61e00460.js",
+    "main.css": "/goit-test-tweets/static/css/main.a1846f8c.css",
+    "main.js": "/goit-test-tweets/static/js/main.d8614889.js",
     "static/js/304.682c974f.chunk.js": "/goit-test-tweets/static/js/304.682c974f.chunk.js",
-    "static/js/904.0ff4b07f.chunk.js": "/goit-test-tweets/static/js/904.0ff4b07f.chunk.js",
+    "static/js/642.b77e8d59.chunk.js": "/goit-test-tweets/static/js/642.b77e8d59.chunk.js",
     "static/js/877.25f16ce5.chunk.js": "/goit-test-tweets/static/js/877.25f16ce5.chunk.js",
     "static/js/987.90b565b3.chunk.js": "/goit-test-tweets/static/js/987.90b565b3.chunk.js",
     "static/media/picture_2x.png": "/goit-test-tweets/static/media/picture_2x.85458bcf4ea38d7d5833.png",
     "static/media/picture_1x.png": "/goit-test-tweets/static/media/picture_1x.af9e159fba3a82e059d2.png",
     "static/media/logotype.svg": "/goit-test-tweets/static/media/logotype.3936f7ee9260c7dcae36c6da3da4f2a8.svg",
     "index.html": "/goit-test-tweets/index.html",
-    "main.dedb5910.css.map": "/goit-test-tweets/static/css/main.dedb5910.css.map",
-    "main.61e00460.js.map": "/goit-test-tweets/static/js/main.61e00460.js.map",
+    "main.a1846f8c.css.map": "/goit-test-tweets/static/css/main.a1846f8c.css.map",
+    "main.d8614889.js.map": "/goit-test-tweets/static/js/main.d8614889.js.map",
     "304.682c974f.chunk.js.map": "/goit-test-tweets/static/js/304.682c974f.chunk.js.map",
-    "904.0ff4b07f.chunk.js.map": "/goit-test-tweets/static/js/904.0ff4b07f.chunk.js.map",
+    "642.b77e8d59.chunk.js.map": "/goit-test-tweets/static/js/642.b77e8d59.chunk.js.map",
     "877.25f16ce5.chunk.js.map": "/goit-test-tweets/static/js/877.25f16ce5.chunk.js.map",
     "987.90b565b3.chunk.js.map": "/goit-test-tweets/static/js/987.90b565b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dedb5910.css",
-    "static/js/main.61e00460.js"
+    "static/css/main.a1846f8c.css",
+    "static/js/main.d8614889.js"
   ]
 }

@@ -28,7 +28,7 @@ const Tweets = () => {
     dispatch(fetchUsers(currentPage + 1))
       .unwrap()
       .then(data => {
-        if (data.length === 0) {
+        if (data.length < 3) {
           toast.info('You have reached the end of tweets.');
           setHasMoreData(false);
         } else {

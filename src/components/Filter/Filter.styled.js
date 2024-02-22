@@ -47,7 +47,9 @@ export const Item = styled.li`
 `;
 
 export const Text = styled.p`
-  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 5px;
 
   width: 196px;

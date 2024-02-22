@@ -8,7 +8,7 @@ export const Item = styled.li`
 
   width: 380px;
   height: 460px;
-  /* padding: 28px 36px 36px; */
+  padding: 28px 36px 36px;
 
   border-radius: ${({ theme }) => theme.spacing(5)};
   background: ${({ theme }) => theme.colors.background};
@@ -23,9 +23,9 @@ export const Logo = styled.img`
 `;
 
 export const Img = styled.img`
-  margin: 28px 36px 0;
   width: 308px;
   height: 168px;
+  margin-bottom: 18px;
 `;
 
 export const ContainerLine = styled.div`
@@ -35,7 +35,7 @@ export const ContainerLine = styled.div`
 
   width: 380px;
   height: 8px;
-  margin: 18px 0 62px 0;
+  margin-bottom: 62px;
 
   background-color: ${({ theme }) => theme.colors.light};
   box-shadow: ${({ theme }) => theme.shadows.line};

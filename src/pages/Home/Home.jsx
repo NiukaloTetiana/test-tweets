@@ -1,5 +1,3 @@
-// import { UserItem } from 'components/UserItem/UserItem';
-
 import {
   Wrapper,
   Container,
@@ -9,6 +7,7 @@ import {
   TitleImg,
   Text,
   List,
+  Item,
   Span,
 } from 'pages/Home/Home.styled';
 
@@ -25,20 +24,25 @@ const Home = () => {
           updated on the latest tweets.
         </Text>
         <TitleDesc>Features</TitleDesc>
+
         <List>
-          <li>
+          <Item>
             <Span>Follow/Unfollow: </Span> Connect with other users by following
             or unfollowing them.
-          </li>
-          <li>
+          </Item>
+          <Item>
             <Span>Explore: </Span>Discover new users and trending tweets.
-          </li>
+          </Item>
+          <Item>
+            <Span>Filter by Categories: </Span> Utilize the capability to filter
+            content based on relevant categories.
+          </Item>
         </List>
-        <TitleDesc>Getting Started</TitleDesc>
-        <Text>
+        {/* <TitleDesc>Getting Started</TitleDesc> */}
+        {/* <Text>
           To get started, explore the user profiles. Use the navigation bar to
           access sections of the application.
-        </Text>
+        </Text> */}
       </ContainerText>
 
       <Wrapper>

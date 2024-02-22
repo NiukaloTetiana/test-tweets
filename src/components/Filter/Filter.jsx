@@ -3,7 +3,7 @@ import { TbFilterHeart } from 'react-icons/tb';
 
 import { Container, Text, List, Item } from './Filter.styled';
 
-export const Filter = () => {
+export const Filter = ({ onSelectFilter }) => {
   const [isListVisible, setIsListVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState('Filter');
 
@@ -14,6 +14,7 @@ export const Filter = () => {
   const handleItemClick = item => {
     setSelectedItem(item);
     setIsListVisible(false);
+    onSelectFilter(item);
   };
 
   return (

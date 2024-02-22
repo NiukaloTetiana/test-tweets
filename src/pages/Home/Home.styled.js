@@ -27,13 +27,6 @@ export const ContainerText = styled.div`
   width: 750px;
 `;
 
-export const Text = styled.p`
-  font-weight: 500;
-  font-size: 18px;
-  color: ${({ theme }) => theme.colors.light};
-  text-shadow: ${({ theme }) => theme.shadows.text};
-`;
-
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.backgNav};
   text-shadow: ${({ theme }) => theme.shadows.text};
@@ -49,14 +42,25 @@ export const TitleImg = styled.h2`
   text-shadow: ${({ theme }) => theme.shadows.text};
 `;
 
+export const Text = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1.6;
+  color: ${({ theme }) => theme.colors.text};
+`;
+
 export const List = styled.ul`
   font-weight: 500;
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.light};
-  text-shadow: ${({ theme }) => theme.shadows.text};
+  letter-spacing: 1.6;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Span = styled.span`
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.accent};
   text-shadow: ${({ theme }) => theme.shadows.text};
+`;
+
+export const Item = styled.li`
+  padding-bottom: 10px;
 `;

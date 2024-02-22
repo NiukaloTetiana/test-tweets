@@ -23,9 +23,10 @@ const Tweets = () => {
   const users = useSelector(selectUsers);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMoreData, setHasMoreData] = useState(true);
+  const [selectedFilter, setSelectedFilter] = useState('show all');
 
   const handleLoadMore = () => {
-    dispatch(fetchUsers(currentPage + 1))
+    dispatch(fetchUsers(currentPage + 1, selectedFilter))
       .unwrap()
       .then(data => {
         if (data.length < 3) {
@@ -40,11 +41,18 @@ const Tweets = () => {
       });
   };
 
+  const handleFilterSelect = filter => {
+    setSelectedFilter(filter);
+    setCurrentPage(1);
+    setHasMoreData(true);
+    dispatch(fetchUsers({ page: 1, filter }));
+  };
+
   return (
     <>
       <Container>
         <GoBack />
-        <Filter />
+        <Filter onSelectFilter={handleFilterSelect} />
       </Container>
 
       {loading && <Loader />}

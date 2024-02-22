@@ -59,8 +59,8 @@ export const ContainerAvatar = styled.div`
 export const Avatar = styled.img`
   overflow: hidden;
   border-radius: ${({ theme }) => theme.spacing(15)};
-  width: 63px;
-  height: 63px;
+  width: 62px;
+  height: 62px;
 `;
 
 export const Info = styled.div`

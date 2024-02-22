@@ -15,14 +15,15 @@ const usersSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        state.items = action.payload;
         state.items =
           action.meta.arg === 1
             ? action.payload
             : [...state.items, ...action.payload];
+        state.currentPage = action.meta.arg;
       })
       .addMatcher(isAnyOf(fetchUsers.pending), state => {
         state.isLoading = true;
+        state.error = null;
       })
       .addMatcher(isAnyOf(fetchUsers.rejected), (state, action) => {
         state.isLoading = false;

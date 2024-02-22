@@ -10,12 +10,16 @@ export const FollowButton = ({ user, initialIsFollowing, onFollowToggle }) => {
   const handleFollowClick = () => {
     setIsFollowing(prevIsFollowing => !prevIsFollowing);
     if (onFollowToggle) {
-      onFollowToggle(isFollowing);
+      onFollowToggle(!isFollowing);
     }
   };
 
   return (
-    <Button type="button" onClick={handleFollowClick} isFollowing={isFollowing}>
+    <Button
+      type="button"
+      onClick={handleFollowClick}
+      $isFollowing={isFollowing}
+    >
       {isFollowing ? 'Following' : 'Follow'}
     </Button>
   );

@@ -5,7 +5,11 @@ import { GoBack } from 'components/GoBack/GoBack';
 import { Loader } from 'components/Loader/Loader';
 import { UsersList } from 'components/UsersList/UsersList';
 import { LoadMoreButton } from '../../components/LoadMoreButton/LoadMoreButton';
-import { selectError, selectIsLoading } from '../../redux/selectors';
+import {
+  selectError,
+  selectIsLoading,
+  selectUsers,
+} from '../../redux/selectors';
 import NotFound from 'pages/NotFound/NotFound';
 import { fetchUsers } from '../../redux/operations';
 import { ContainerButton } from './Tweets.styled';
@@ -14,6 +18,7 @@ const Tweets = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const users = useSelector(selectUsers);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -27,13 +32,16 @@ const Tweets = () => {
   return (
     <>
       <GoBack />
+
       {loading && <Loader />}
       {error && <NotFound />}
-      <UsersList />
+      <UsersList users={users} />
 
-      <ContainerButton>
-        <LoadMoreButton onClick={handleLoadMore} />
-      </ContainerButton>
+      {!loading && currentPage * 3 >= users.length && (
+        <ContainerButton>
+          <LoadMoreButton onClick={handleLoadMore} />
+        </ContainerButton>
+      )}
     </>
   );
 };

@@ -12,7 +12,7 @@ export const Button = styled.button`
 
   color: ${({ theme }) => theme.colors.text};
   background-color: ${props =>
-    props.isFollowing ? props.theme.colors.green : props.theme.colors.light};
+    props.$isFollowing ? props.theme.colors.green : props.theme.colors.light};
   border-radius: ${({ theme }) => theme.spacing(2.5)};
   box-shadow: ${({ theme }) => theme.shadows.box};
   transition: ${({ theme }) => theme.transition.trnz},

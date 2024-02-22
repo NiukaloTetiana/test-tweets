@@ -17,8 +17,7 @@ export const Button = styled.button`
   transition: ${({ theme }) => theme.transition.trnz},
     ${({ theme }) => theme.transition.delay};
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.green};
     transform: scale(1.1);
   }

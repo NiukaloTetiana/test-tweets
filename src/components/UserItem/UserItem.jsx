@@ -2,8 +2,7 @@ import logotype from '../../assets/logotype.svg';
 import picture_1x from '../../assets/images/picture_1x.png';
 import picture_2x from '../../assets/images/picture_2x.png';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { FollowButton } from '../FollowButton/FollowButton';
-
+import { FollowButton } from '../../components/FollowButton/FollowButton';
 import {
   Item,
   Img,
@@ -15,13 +14,7 @@ import {
   ContainerLine,
 } from './UserItem.styled';
 
-export const UserItem = ({
-  avatar,
-  user,
-  tweets,
-  followers,
-  onFollowToggle,
-}) => {
+export const UserItem = ({ avatar, user, tweets, followers }) => {
   const [followersCount, setFollowersCount] = useLocalStorage(
     `followersCount_${user}`,
     followers
@@ -56,6 +49,7 @@ export const UserItem = ({
         <Text>{tweets.toLocaleString()} TWEETS</Text>
         <Text>{followersCount.toLocaleString('en-US')} FOLLOWERS</Text>
       </Info>
+
       <FollowButton
         user={user}
         initialIsFollowing={false}

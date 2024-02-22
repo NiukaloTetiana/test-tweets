@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const StyledLink = styled(NavLink)`
   display: flex;
   align-items: flex-end;
-  margin-bottom: 20px;
 
   font-size: 25px;
   font-weight: 700;

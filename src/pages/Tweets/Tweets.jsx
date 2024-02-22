@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { GoBack } from 'components/GoBack/GoBack';
@@ -11,8 +11,10 @@ import {
   selectUsers,
 } from '../../redux/selectors';
 import NotFound from 'pages/NotFound/NotFound';
+import { Filter } from '../../components/Filter/Filter';
+import { Container, ContainerButton } from './Tweets.styled';
 import { fetchUsers } from '../../redux/operations';
-import { ContainerButton } from './Tweets.styled';
+import { toast } from 'react-toastify';
 
 const Tweets = () => {
   const dispatch = useDispatch();
@@ -20,24 +22,36 @@ const Tweets = () => {
   const error = useSelector(selectError);
   const users = useSelector(selectUsers);
   const [currentPage, setCurrentPage] = useState(1);
-
-  useEffect(() => {
-    dispatch(fetchUsers(currentPage));
-  }, [dispatch, currentPage]);
+  const [hasMoreData, setHasMoreData] = useState(true);
 
   const handleLoadMore = () => {
-    setCurrentPage(prevPage => prevPage + 1);
+    dispatch(fetchUsers(currentPage + 1))
+      .unwrap()
+      .then(data => {
+        if (data.length === 0) {
+          toast.info('You have reached the end of tweets.');
+          setHasMoreData(false);
+        } else {
+          setCurrentPage(prevPage => prevPage + 1);
+        }
+      })
+      .catch(error => {
+        toast.warning(error);
+      });
   };
 
   return (
     <>
-      <GoBack />
+      <Container>
+        <GoBack />
+        <Filter />
+      </Container>
 
       {loading && <Loader />}
       {error && <NotFound />}
-      <UsersList users={users} />
+      {<UsersList users={users} />}
 
-      {!loading && currentPage * 3 >= users.length && (
+      {!loading && hasMoreData && (
         <ContainerButton>
           <LoadMoreButton onClick={handleLoadMore} />
         </ContainerButton>

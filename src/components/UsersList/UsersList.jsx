@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import { useEffect } from 'react';
 
 import { UserItem } from '../UserItem/UserItem';
 import { List } from './UsersList.styled';
@@ -12,18 +11,7 @@ export const UsersList = () => {
   const users = useSelector(selectUsers);
 
   useEffect(() => {
-    dispatch(fetchUsers(1))
-      .unwrap()
-      .then(data => {
-        if (data.length < 3) {
-          toast.info('You have reached the end of tweets.');
-        }
-      })
-      .catch(error => {
-        if (error !== null) {
-          toast.warning(error);
-        }
-      });
+    dispatch(fetchUsers(1));
   }, [dispatch]);
 
   return (

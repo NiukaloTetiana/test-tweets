@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  currentPage: 1,
 };
 
 const usersSlice = createSlice({
@@ -15,6 +16,10 @@ const usersSlice = createSlice({
     builder
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.items = action.payload;
+        state.items =
+          action.meta.arg === 1
+            ? action.payload
+            : [...state.items, ...action.payload];
       })
       .addMatcher(isAnyOf(fetchUsers.pending), state => {
         state.isLoading = true;

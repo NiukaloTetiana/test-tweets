@@ -46,7 +46,6 @@ export const ContainerAvatar = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 1000;
 
   border-color: 8px solid ${({ theme }) => theme.colors.light};
   border-radius: ${({ theme }) => theme.spacing(15)};

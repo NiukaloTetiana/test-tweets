@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
   padding: 14px 28px;
   width: 196px;
   height: 50px;
@@ -24,6 +20,6 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     background-color: ${({ theme }) => theme.colors.green};
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
   }
 `;

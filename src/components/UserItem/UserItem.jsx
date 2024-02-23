@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react';
 import logotype from '../../assets/logotype.svg';
 import picture_1x from '../../assets/images/picture_1x.png';
 import picture_2x from '../../assets/images/picture_2x.png';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { FollowButton } from '../../components/FollowButton/FollowButton';
+
 import {
   Item,
   Img,
@@ -12,19 +12,27 @@ import {
   Info,
   ContainerAvatar,
   ContainerLine,
+  Button,
 } from './UserItem.styled';
 
-export const UserItem = ({ avatar, user, tweets, followers }) => {
-  const [followersCount, setFollowersCount] = useLocalStorage(
-    `followersCount_${user}`,
-    followers
-  );
+export const UserItem = ({
+  id,
+  avatar,
+  user,
+  tweets,
+  followers,
+  handleFollowClick,
+  followersCount,
+}) => {
+  const [isFollowing, setIsFollowing] = useState(false);
 
-  const handleFollowToggle = newIsFollowing => {
-    setFollowersCount(prevCount =>
-      newIsFollowing ? prevCount + 1 : prevCount - 1
-    );
-  };
+  useEffect(() => {
+    if (followersCount.includes(id)) {
+      setIsFollowing(true);
+    } else {
+      setIsFollowing(false);
+    }
+  }, [followersCount, id]);
 
   return (
     <Item>
@@ -47,14 +55,21 @@ export const UserItem = ({ avatar, user, tweets, followers }) => {
 
       <Info>
         <Text>{tweets.toLocaleString()} TWEETS</Text>
-        <Text>{followersCount.toLocaleString('en-US')} FOLLOWERS</Text>
+        <Text>
+          {(isFollowing ? followers + 1 : followers).toLocaleString('en-US')}{' '}
+          FOLLOWERS
+        </Text>
       </Info>
 
-      <FollowButton
-        user={user}
-        initialIsFollowing={false}
-        onFollowToggle={handleFollowToggle}
-      />
+      <Button
+        type="button"
+        onClick={() => {
+          handleFollowClick(id);
+        }}
+        $isFollowing={isFollowing}
+      >
+        {isFollowing ? 'Following' : 'Follow'}
+      </Button>
     </Item>
   );
 };

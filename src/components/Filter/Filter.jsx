@@ -1,31 +1,35 @@
 import { useState } from 'react';
 import { TbFilterHeart } from 'react-icons/tb';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { filterUsers } from '../../redux/filterSlice';
+import { selectFilter } from '../../redux/selectors';
 
 import { Container, Text, List, Item } from './Filter.styled';
 
-export const Filter = ({ onSelectFilter }) => {
+export const Filter = () => {
   const [isListVisible, setIsListVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState('Filter');
+  const dispatch = useDispatch();
+  const filter = useSelector(selectFilter);
 
   const handleContainerClick = () => {
     setIsListVisible(!isListVisible);
   };
 
   const handleItemClick = item => {
-    setSelectedItem(item);
     setIsListVisible(false);
-    onSelectFilter(item);
+    dispatch(filterUsers(item));
   };
 
   return (
     <Container onClick={handleContainerClick}>
       <Text>
-        {selectedItem === 'Filter' ? (
+        {filter === 'filter' ? (
           <>
             Filter <TbFilterHeart />
           </>
         ) : (
-          selectedItem
+          filter
         )}
       </Text>
 

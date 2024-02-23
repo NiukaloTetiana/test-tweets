@@ -27,8 +27,8 @@ const Home = () => {
 
         <List>
           <Item>
-            <Span>Follow/Unfollow: </Span> Connect with other users by following
-            or unfollowing them.
+            <Span>Follow/Following: </Span> Connect with other users using the
+            button follow or following them.
           </Item>
           <Item>
             <Span>Explore: </Span>Discover new users and trending tweets.

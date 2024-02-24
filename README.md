@@ -33,8 +33,8 @@ The general appearance of the card in two states - Follow and Following.
    (100500). In the UI, it should be displayed with a comma (100,500).
 
 Create your personal backend for development using the UI service
-[mockapi.io](https://mocapi.io) Create a "users" resource. Use the resource
-constructor and describe the user object as specified below.
+[mockapi.io](https://www.mockapi.io/) Create a "users" resource. Use the
+resource constructor and describe the user object as specified below.
 
 ## User:
 

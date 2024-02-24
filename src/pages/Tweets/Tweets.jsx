@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { GoBack } from 'components/GoBack/GoBack';
-import { Loader } from 'components/Loader/Loader';
-import { UsersList } from 'components/UsersList/UsersList';
-import { LoadMoreButton } from '../../components/LoadMoreButton/LoadMoreButton';
-import { selectError, selectIsLoading } from '../../redux/selectors';
-import NotFound from 'pages/NotFound/NotFound';
-import { Filter } from '../../components/Filter/Filter';
-import { Container, ContainerButton } from './Tweets.styled';
-import { fetchUsers } from '../../redux/operations';
 import { toast } from 'react-toastify';
+
+import { selectError, selectIsLoading } from '../../redux/selectors';
+import { fetchUsers } from '../../redux/operations';
+import { GoBack } from 'components';
+import { Loader } from 'components';
+import { UsersList } from 'components';
+import { LoadMoreButton } from 'components';
+import { Error } from 'components';
+import { Filter } from 'components';
+import { Container, ContainerButton } from './Tweets.styled';
 
 const Tweets = () => {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ const Tweets = () => {
       </Container>
 
       {loading && <Loader />}
-      {error && <NotFound />}
+      {error && <Error />}
       {<UsersList />}
 
       {!loading && hasMoreData && (

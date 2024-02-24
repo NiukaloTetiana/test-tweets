@@ -35,6 +35,9 @@ To install Twittes for educational purposes, follow these steps:
 
 - React
 - Styled Components
+- Axios
+- JavaScript
+- Redux Toolkit
 
 ## Contribution
 

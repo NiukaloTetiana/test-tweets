@@ -1,9 +1,9 @@
-import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import { RiHomeGearLine } from 'react-icons/ri';
 import { GiHummingbird } from 'react-icons/gi';
 
-import { Loader } from '../../components/Loader/Loader';
+import { Loader } from 'components';
 import {
   Container,
   StyledHeader,
@@ -42,5 +42,3 @@ export const Layout = () => {
     </Container>
   );
 };
-
-export default Layout;

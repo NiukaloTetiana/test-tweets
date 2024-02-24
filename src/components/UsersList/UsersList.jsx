@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { UserItem } from '../UserItem/UserItem';
-import { List } from './UsersList.styled';
 import { selectFilter, selectUsers } from '../../redux/selectors';
 import { fetchUsers } from '../../redux/operations';
-import { getFilteredUsers } from '../../helpers/getFilteredUsers';
-// import { filterUsers } from '../../redux/filterSlice';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { getFilteredUsers } from 'helpers';
+import { useLocalStorage } from 'hooks';
+import { UserItem } from 'components';
+
+import { List } from './UsersList.styled';
 
 export const UsersList = () => {
   const dispatch = useDispatch();

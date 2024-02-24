@@ -5,18 +5,22 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.backgNav};
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
-  display: flex;
   background-size: cover;
+
+  height: 100vh;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
 export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.orange};
-  text-shadow: ${({ theme }) => theme.shadows.text};
   font-size: 50px;
   font-weight: 700;
+
+  text-shadow: ${({ theme }) => theme.shadows.text};
+  color: ${({ theme }) => theme.colors.orange};
+
   margin-bottom: 28px;
 `;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TbFilterHeart } from 'react-icons/tb';
 import { useDispatch, useSelector } from 'react-redux';
+import { TbFilterHeart } from 'react-icons/tb';
 
 import { filterUsers } from '../../redux/filterSlice';
 import { selectFilter } from '../../redux/selectors';

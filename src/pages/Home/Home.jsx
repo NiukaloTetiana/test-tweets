@@ -38,11 +38,6 @@ const Home = () => {
             content based on relevant categories.
           </Item>
         </List>
-        {/* <TitleDesc>Getting Started</TitleDesc> */}
-        {/* <Text>
-          To get started, explore the user profiles. Use the navigation bar to
-          access sections of the application.
-        </Text> */}
       </ContainerText>
 
       <Wrapper>

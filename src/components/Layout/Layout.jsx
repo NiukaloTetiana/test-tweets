@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { RiHomeGearLine } from 'react-icons/ri';
 import { GiHummingbird } from 'react-icons/gi';
 
+import { Loader } from '../../components/Loader/Loader';
 import {
   Container,
   StyledHeader,
@@ -34,7 +35,7 @@ export const Layout = () => {
         </Navigation>
       </StyledHeader>
       <main>
-        <Suspense>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

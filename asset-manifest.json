@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/goit-test-tweets/static/css/main.a1846f8c.css",
-    "main.js": "/goit-test-tweets/static/js/main.c0d85573.js",
+    "main.js": "/goit-test-tweets/static/js/main.cb036dae.js",
     "static/js/304.37455908.chunk.js": "/goit-test-tweets/static/js/304.37455908.chunk.js",
-    "static/js/17.a07adc9a.chunk.js": "/goit-test-tweets/static/js/17.a07adc9a.chunk.js",
+    "static/js/36.34321440.chunk.js": "/goit-test-tweets/static/js/36.34321440.chunk.js",
     "static/js/877.8821262c.chunk.js": "/goit-test-tweets/static/js/877.8821262c.chunk.js",
     "static/js/987.90b565b3.chunk.js": "/goit-test-tweets/static/js/987.90b565b3.chunk.js",
-    "static/js/821.dc8d97fd.chunk.js": "/goit-test-tweets/static/js/821.dc8d97fd.chunk.js",
+    "static/js/526.5f8446c3.chunk.js": "/goit-test-tweets/static/js/526.5f8446c3.chunk.js",
     "static/media/picture_2x.png": "/goit-test-tweets/static/media/picture_2x.85458bcf4ea38d7d5833.png",
     "static/media/picture_1x.png": "/goit-test-tweets/static/media/picture_1x.af9e159fba3a82e059d2.png",
     "static/media/logotype.svg": "/goit-test-tweets/static/media/logotype.3936f7ee9260c7dcae36c6da3da4f2a8.svg",
     "index.html": "/goit-test-tweets/index.html",
     "main.a1846f8c.css.map": "/goit-test-tweets/static/css/main.a1846f8c.css.map",
-    "main.c0d85573.js.map": "/goit-test-tweets/static/js/main.c0d85573.js.map",
+    "main.cb036dae.js.map": "/goit-test-tweets/static/js/main.cb036dae.js.map",
     "304.37455908.chunk.js.map": "/goit-test-tweets/static/js/304.37455908.chunk.js.map",
-    "17.a07adc9a.chunk.js.map": "/goit-test-tweets/static/js/17.a07adc9a.chunk.js.map",
+    "36.34321440.chunk.js.map": "/goit-test-tweets/static/js/36.34321440.chunk.js.map",
     "877.8821262c.chunk.js.map": "/goit-test-tweets/static/js/877.8821262c.chunk.js.map",
     "987.90b565b3.chunk.js.map": "/goit-test-tweets/static/js/987.90b565b3.chunk.js.map",
-    "821.dc8d97fd.chunk.js.map": "/goit-test-tweets/static/js/821.dc8d97fd.chunk.js.map"
+    "526.5f8446c3.chunk.js.map": "/goit-test-tweets/static/js/526.5f8446c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1846f8c.css",
-    "static/js/main.c0d85573.js"
+    "static/js/main.cb036dae.js"
   ]
 }

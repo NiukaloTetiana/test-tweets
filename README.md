@@ -4,14 +4,18 @@
 
 Create tweet cards and add interactivity when the button is clicked.
 
+![Card](https://textbook.edu.goit.global/lms-career-homework/uk/img/image-1.jpg)
+
+The general appearance of the card in two states - Follow and Following.
+
 ## Execution Criteria:
 
-1. Layout is fixed in pixels, semantic, and valid.
-2. No errors in the browser console.
-3. Work is done in native JS using bundlers or in React.
-4. Interactivity works according to the technical task.
-5. Code is formatted and without comments.
-6. README.md is described in the repository.
+- Layout is fixed in pixels, semantic, and valid.
+- No errors in the browser console.
+- Work is done in native JS using bundlers or in React.
+- Interactivity works according to the technical task.
+- Code is formatted and without comments.
+- README.md is described in the repository.
 
 ## Technical Task:
 
@@ -28,9 +32,9 @@ Create tweet cards and add interactivity when the button is clicked.
 5. The number 100,500 in the code should be specified as a single value
    (100500). In the UI, it should be displayed with a comma (100,500).
 
-Create your personal backend for development using the UI service mockapi.io.
-Create a "users" resource. Use the resource constructor and describe the user
-object as specified below.
+Create your personal backend for development using the UI service
+[Mocapi](https://mocapi.io/) Create a "users" resource. Use the resource
+constructor and describe the user object as specified below.
 
 ## User:
 
@@ -42,6 +46,8 @@ object as specified below.
    database. Implement pagination. On one pagination page, display 3 tweets, and
    the rest should be loaded when clicking Load More.
 4. Other requirements are similar to the above technical task.
+
+[Maket](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiYTfiXggVItgVd-1)
 
 ## Additional Task:
 
@@ -56,6 +62,6 @@ there should be a Back button that leads to the main page.
 
 ## Add filtering. This should be a dropdown with 3 options (style it as you wish):
 
-1. show all - display all tweets.
-2. follow - display tweets where the state is follow.
-3. followings - display tweets where the state is following.
+- **show all**: Display all tweets.
+- **follow**: Display tweets where the state is follow.
+- **followings**: Display tweets where the state is following.

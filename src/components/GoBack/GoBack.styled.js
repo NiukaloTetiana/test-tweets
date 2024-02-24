@@ -5,8 +5,8 @@ export const StyledLink = styled(NavLink)`
   display: flex;
   align-items: flex-end;
 
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.light};
   text-shadow: ${({ theme }) => theme.shadows.text};
   transition: ${({ theme }) => theme.transition.trnz},
@@ -15,5 +15,9 @@ export const StyledLink = styled(NavLink)`
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 25px;
   }
 `;

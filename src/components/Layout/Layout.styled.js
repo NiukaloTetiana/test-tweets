@@ -2,7 +2,11 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 25px;
+  padding: 8px;
+
+  @media (min-width: 768px) {
+    padding: 25px;
+  }
 `;
 
 export const StyledHeader = styled.header`
@@ -18,15 +22,27 @@ export const StyledHeader = styled.header`
 `;
 
 export const Navigation = styled.nav`
-  padding: 25px;
+  padding: 10px 25px;
+
+  @media (min-width: 768px) {
+    padding: 25px;
+  }
 `;
 
 export const NavList = styled.ul`
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
 
   display: flex;
-  gap: 20px;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    font-weight: 600;
+
+    display: flex;
+    gap: 20px;
+  }
 `;
 
 export const NavItem = styled.li`

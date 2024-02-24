@@ -36,7 +36,7 @@ export const UserItem = ({
 
   return (
     <Item>
-      <Logo src={logotype} alt="Logo" width="76" height="22" loading="lazy" />
+      <Logo src={logotype} alt="Logo" loading="lazy" />
 
       <picture>
         <source

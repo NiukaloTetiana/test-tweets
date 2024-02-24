@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: ${props => (props.$isVisible ? 'block' : 'none')};
 
-  width: 196px;
+  width: 120px;
 
   background: ${({ theme }) => theme.colors.backgNav};
   border-radius: ${({ theme }) => theme.spacing(2.5)};
@@ -23,13 +23,17 @@ export const List = styled.ul`
   top: 100%;
   left: 0;
   z-index: 1000;
+
+  @media (min-width: 768px) {
+    width: 196px;
+  }
 `;
 
 export const Item = styled.li`
-  padding: 14px 28px;
+  padding: 8px 5px;
 
   font-weight: 500;
-  font-size: 20px;
+  font-size: 13px;
   text-transform: uppercase;
   text-align: center;
 
@@ -44,6 +48,12 @@ export const Item = styled.li`
     background-color: ${({ theme }) => theme.colors.green};
     color: ${({ theme }) => theme.colors.text};
   }
+
+  @media (min-width: 768px) {
+    padding: 14px 28px;
+
+    font-size: 20px;
+  }
 `;
 
 export const Text = styled.p`
@@ -52,11 +62,11 @@ export const Text = styled.p`
   justify-content: center;
   margin-bottom: 5px;
 
-  width: 196px;
-  height: 50px;
+  width: 120px;
+  height: 35px;
 
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
   text-align: center;
 
@@ -69,5 +79,13 @@ export const Text = styled.p`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.backgNav};
+  }
+
+  @media (min-width: 768px) {
+    width: 196px;
+    height: 50px;
+
+    font-weight: 600;
+    font-size: 18px;
   }
 `;

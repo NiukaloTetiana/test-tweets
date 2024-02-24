@@ -25,7 +25,7 @@ export const Layout = () => {
               </StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to="/tweets">
+              <StyledLink to="tweets">
                 <GiHummingbird />
                 Tweets
               </StyledLink>
